@@ -9,7 +9,8 @@
     "cli:dev": "ts-node ./src/data-sources/cli/cli.ts",
     "cli:prod": "tsc -p ./tsconfig.json --outDir ./build/cli",
     "server:dev": "nodemon --watch 'src/' --exec 'ts-node src/data-sources/express/server.ts' -e ts",
-    "server:prod": "tsc -p ./tsconfig.json --outDir ./build/server"
+    "server:prod": "tsc -p ./tsconfig.json --outDir ./build/server",
+    "prepare": "husky install"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -24,8 +25,14 @@
     "@swc/jest": "^0.2.21",
     "@types/cors": "^2.8.12",
     "@types/jest": "^28.1.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.0",
+    "prettier": "2.6.2",
     "ts-jest": "^28.0.4",
     "ts-node": "^10.8.1",
     "typescript": "^4.3.5"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
