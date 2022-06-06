@@ -1,4 +1,3 @@
-
 export default class Route {
   name: string;
   address: string;
@@ -8,7 +7,7 @@ export default class Route {
     this.address = address;
     this.validate();
   }
-  
+
   private validate() {
     if (!this.name) {
       throw new Error("Route name is required");
