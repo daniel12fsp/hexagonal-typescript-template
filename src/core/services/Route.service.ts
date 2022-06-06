@@ -12,14 +12,10 @@ export class RouteService {
     }
 
 
-    async save(route: Route) {
-        console.log("save")
-        if (route.address.toLocaleLowerCase().includes("brasil")) {
+    save(route: Route) {
+        if (!route.address.toLocaleLowerCase().includes("brasil")) {
             throw new Error("Address must be brazillian address");
-            
         }
-       return await this.routeRepository.save(route);
+       return this.routeRepository.save(route);
      }
-   
-    
 }

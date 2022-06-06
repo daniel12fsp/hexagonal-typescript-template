@@ -14,12 +14,12 @@ describe("Shoul routes all field uppercase", () => {
   
     it("When there is route return all fields uppercase", async () => {
         const useCase = new ListRoutesAllFieldUppercaseUseCase(routeService);
-        const route = new Route("name", "address");
+        const route = new Route("name", "address in brasil");
         routeService.save(route);
         const result = await useCase.execute();
         expect(result).toEqual([{
             name: "NAME",
-            address: "ADDRESS"
+            address: "ADDRESS IN BRASIL"
         }]);
     });
   });
