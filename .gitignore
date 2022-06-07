@@ -3,3 +3,5 @@ node_modules
 *.log
 *.error
 build
+node_modules
+.serverless

@@ -1,5 +1,6 @@
 {
   "description": "Hexagonal template example with test unity",
+  "main": "serverless.ts",
   "author": {
     "name": "Daniel Pereira",
     "url": "https://github.com/schrodinger-bit"
@@ -13,11 +14,20 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@middy/core": "^3.0.4",
+    "@middy/http-json-body-parser": "^3.0.4",
+    "@serverless/typescript": "^3.18.0",
+    "@types/aws-lambda": "^8.10.98",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "jest": "^28.1.0",
-    "knex": "^0.21.20"
+    "json-schema-to-ts": "^2.5.3",
+    "knex": "^0.21.20",
+    "serverless": "^3.19.0",
+    "serverless-esbuild": "^1.30.0",
+    "serverless-http": "^2.7.0",
+    "tsconfig-paths": "^4.0.0"
   },
   "devDependencies": {
     "@swc/cli": "^0.1.57",
