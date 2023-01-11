@@ -23,7 +23,7 @@
     "express": "^4.17.1",
     "jest": "^28.1.0",
     "json-schema-to-ts": "^2.5.3",
-    "knex": "^0.21.20",
+    "knex": "^2.4.0",
     "serverless": "^3.19.0",
     "serverless-esbuild": "^1.30.0",
     "serverless-http": "^2.7.0",
